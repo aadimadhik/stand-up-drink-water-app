@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49E5FB1486F653D9EAC795E6 /* DeskBreakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2538998E86D2895583BD6 /* DeskBreakApp.swift */; };
+		3D0A15204DDE13749BD00DD9 /* DailyCounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963F6EB52E14918C729D1B45 /* DailyCounts.swift */; };
+		61F8C8766DD599E557F85C5B /* ReminderKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238B6029CD108A8395C005D7 /* ReminderKind.swift */; };
+		6A27935732979FE8D6081DE7 /* ReminderSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922273CFE9ADD07B5B950F85 /* ReminderSettings.swift */; };
+		48E087D3D3169D2296983A86 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20076D06561C200B4AE8A43D /* Session.swift */; };
+		B7BB16A9015A562D3558FC13 /* NotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E83BD2731C37A818574F3DE /* NotificationDelegate.swift */; };
+		08222F1F0DD053D917FA3918 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF835FD20AB04A3D5D1D86F /* NotificationScheduler.swift */; };
+		10372ECD7B7649D32EAB4193 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A569EB11DF50D6AD2FBD2A /* SessionController.swift */; };
+		C24A962655EAF0BAC88B6390 /* SoundCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFBF9E9BCB2229BE5CD61D3 /* SoundCatalog.swift */; };
+		F561F4AC40E7AB1B191ABC79 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A35EEBB48575413F754CDF /* HomeView.swift */; };
+		0366047E1EAD5CC5EA2D8838 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A190201E6D76FCFD340ACF /* SettingsView.swift */; };
+		A7EA6541575257A74F7AD1DB /* SoundPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA09FDC577AC5D0CDB9A5106 /* SoundPickerView.swift */; };
+		A6070B9CF28E71610AA267AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A790BB479B2477E3A634A1EB /* Assets.xcassets */; };
+		4728101657346FE7FCF8C4FB /* bell.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73F78C9EC95337982DC41FF4 /* bell.wav */; };
+		F9D9FAEFA3E057CC416311E8 /* bowl.wav in Resources */ = {isa = PBXBuildFile; fileRef = B072D694B3A7B919075A9664 /* bowl.wav */; };
+		30B9E73C7BAAE812C01E3C94 /* chime.wav in Resources */ = {isa = PBXBuildFile; fileRef = 149B2E2924AA893FDF0A255B /* chime.wav */; };
+		2CA6F23F9B6DCB448C067303 /* drop.wav in Resources */ = {isa = PBXBuildFile; fileRef = E166A42B9439040473775909 /* drop.wav */; };
+		6E6120FB58048E430C1524F9 /* marimba.wav in Resources */ = {isa = PBXBuildFile; fileRef = E640AD51BA7508F2FEEB1BBF /* marimba.wav */; };
+		7C89911C2A85282E1ECCB3C9 /* ping.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2512DE9B35A9012135D7C002 /* ping.wav */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F5BF48AA40CAD7891EB709FC /* DeskBreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeskBreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5D2538998E86D2895583BD6 /* DeskBreakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskBreakApp.swift; sourceTree = "<group>"; };
+		963F6EB52E14918C729D1B45 /* DailyCounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCounts.swift; sourceTree = "<group>"; };
+		238B6029CD108A8395C005D7 /* ReminderKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderKind.swift; sourceTree = "<group>"; };
+		922273CFE9ADD07B5B950F85 /* ReminderSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderSettings.swift; sourceTree = "<group>"; };
+		20076D06561C200B4AE8A43D /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		6E83BD2731C37A818574F3DE /* NotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDelegate.swift; sourceTree = "<group>"; };
+		DBF835FD20AB04A3D5D1D86F /* NotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
+		75A569EB11DF50D6AD2FBD2A /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
+		1AFBF9E9BCB2229BE5CD61D3 /* SoundCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCatalog.swift; sourceTree = "<group>"; };
+		F4A35EEBB48575413F754CDF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D8A190201E6D76FCFD340ACF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BA09FDC577AC5D0CDB9A5106 /* SoundPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPickerView.swift; sourceTree = "<group>"; };
+		A790BB479B2477E3A634A1EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		73F78C9EC95337982DC41FF4 /* bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bell.wav; sourceTree = "<group>"; };
+		B072D694B3A7B919075A9664 /* bowl.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bowl.wav; sourceTree = "<group>"; };
+		149B2E2924AA893FDF0A255B /* chime.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chime.wav; sourceTree = "<group>"; };
+		E166A42B9439040473775909 /* drop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = drop.wav; sourceTree = "<group>"; };
+		E640AD51BA7508F2FEEB1BBF /* marimba.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = marimba.wav; sourceTree = "<group>"; };
+		2512DE9B35A9012135D7C002 /* ping.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ping.wav; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		424153ED3CD079DB4DB459AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1C86A29E589D48EC70B6A32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				963F6EB52E14918C729D1B45 /* DailyCounts.swift */,
+				238B6029CD108A8395C005D7 /* ReminderKind.swift */,
+				922273CFE9ADD07B5B950F85 /* ReminderSettings.swift */,
+				20076D06561C200B4AE8A43D /* Session.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C29A8B0CDCFD0F17F1BB8690 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				73F78C9EC95337982DC41FF4 /* bell.wav */,
+				B072D694B3A7B919075A9664 /* bowl.wav */,
+				149B2E2924AA893FDF0A255B /* chime.wav */,
+				E166A42B9439040473775909 /* drop.wav */,
+				E640AD51BA7508F2FEEB1BBF /* marimba.wav */,
+				2512DE9B35A9012135D7C002 /* ping.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		887A6F90336FF23D95C3914B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C29A8B0CDCFD0F17F1BB8690 /* Sounds */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		609874F33224C0C09F1FEE42 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6E83BD2731C37A818574F3DE /* NotificationDelegate.swift */,
+				DBF835FD20AB04A3D5D1D86F /* NotificationScheduler.swift */,
+				75A569EB11DF50D6AD2FBD2A /* SessionController.swift */,
+				1AFBF9E9BCB2229BE5CD61D3 /* SoundCatalog.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		38DF21AEF4612506D6BE5CBE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F4A35EEBB48575413F754CDF /* HomeView.swift */,
+				D8A190201E6D76FCFD340ACF /* SettingsView.swift */,
+				BA09FDC577AC5D0CDB9A5106 /* SoundPickerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C341317EF2B15966CCC0A5FA /* DeskBreak */ = {
+			isa = PBXGroup;
+			children = (
+				A1C86A29E589D48EC70B6A32 /* Models */,
+				887A6F90336FF23D95C3914B /* Resources */,
+				609874F33224C0C09F1FEE42 /* Services */,
+				38DF21AEF4612506D6BE5CBE /* Views */,
+				A790BB479B2477E3A634A1EB /* Assets.xcassets */,
+				F5D2538998E86D2895583BD6 /* DeskBreakApp.swift */,
+			);
+			path = DeskBreak;
+			sourceTree = "<group>";
+		};
+		547D009064F7C3F13BEF3460 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5BF48AA40CAD7891EB709FC /* DeskBreak.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9340614599AB78F485950C7 = {
+			isa = PBXGroup;
+			children = (
+				C341317EF2B15966CCC0A5FA /* DeskBreak */,
+				547D009064F7C3F13BEF3460 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42AEFBAE01D2DFD981F7DA7D /* DeskBreak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 354589B28580510B6EC24620 /* Build configuration list for PBXNativeTarget "DeskBreak" */;
+			buildPhases = (
+				7A70D71C385290AF96BF1031 /* Sources */,
+				424153ED3CD079DB4DB459AF /* Frameworks */,
+				285BB1C1430063331E9F5DD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeskBreak;
+			productName = DeskBreak;
+			productReference = F5BF48AA40CAD7891EB709FC /* DeskBreak.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46F86FAA6BBF9AC94A7E4595 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					42AEFBAE01D2DFD981F7DA7D = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 1F4E3D13C2320EDA50221924 /* Build configuration list for PBXProject "DeskBreak" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B9340614599AB78F485950C7;
+			productRefGroup = 547D009064F7C3F13BEF3460 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42AEFBAE01D2DFD981F7DA7D /* DeskBreak */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		285BB1C1430063331E9F5DD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6070B9CF28E71610AA267AE /* Assets.xcassets in Resources */,
+				4728101657346FE7FCF8C4FB /* bell.wav in Resources */,
+				F9D9FAEFA3E057CC416311E8 /* bowl.wav in Resources */,
+				30B9E73C7BAAE812C01E3C94 /* chime.wav in Resources */,
+				2CA6F23F9B6DCB448C067303 /* drop.wav in Resources */,
+				6E6120FB58048E430C1524F9 /* marimba.wav in Resources */,
+				7C89911C2A85282E1ECCB3C9 /* ping.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A70D71C385290AF96BF1031 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49E5FB1486F653D9EAC795E6 /* DeskBreakApp.swift in Sources */,
+				3D0A15204DDE13749BD00DD9 /* DailyCounts.swift in Sources */,
+				61F8C8766DD599E557F85C5B /* ReminderKind.swift in Sources */,
+				6A27935732979FE8D6081DE7 /* ReminderSettings.swift in Sources */,
+				48E087D3D3169D2296983A86 /* Session.swift in Sources */,
+				B7BB16A9015A562D3558FC13 /* NotificationDelegate.swift in Sources */,
+				08222F1F0DD053D917FA3918 /* NotificationScheduler.swift in Sources */,
+				10372ECD7B7649D32EAB4193 /* SessionController.swift in Sources */,
+				C24A962655EAF0BAC88B6390 /* SoundCatalog.swift in Sources */,
+				F561F4AC40E7AB1B191ABC79 /* HomeView.swift in Sources */,
+				0366047E1EAD5CC5EA2D8838 /* SettingsView.swift in Sources */,
+				A7EA6541575257A74F7AD1DB /* SoundPickerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4A43692AD8BCEEB8B727C85B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C28449456A5A705A7479770B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D8F6610AF6606489ED8DFBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = DeskBreak;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aadim.DeskBreak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3DDF142C91E4BE3A6BA5A69E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = DeskBreak;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aadim.DeskBreak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F4E3D13C2320EDA50221924 /* Build configuration list for PBXProject "DeskBreak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A43692AD8BCEEB8B727C85B /* Debug */,
+				C28449456A5A705A7479770B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		354589B28580510B6EC24620 /* Build configuration list for PBXNativeTarget "DeskBreak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D8F6610AF6606489ED8DFBC /* Debug */,
+				3DDF142C91E4BE3A6BA5A69E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 46F86FAA6BBF9AC94A7E4595 /* Project object */;
+}

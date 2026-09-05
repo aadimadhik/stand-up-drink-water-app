@@ -56,9 +56,12 @@ Settings screen then offers: System Default, Chime, Marimba-ish, Bell, Water Dro
 Vibrate-only — with a preview button per sound. Water and Stand get **independent** sound
 selection so you can tell them apart while looking away from the screen.
 
-**2.2 Focus / Do Not Disturb will swallow reminders** unless you set
-`content.interruptionLevel = .timeSensitive`. Add the *Time Sensitive Notifications* capability
-in Xcode. Without this, the app is useless during a "Work" Focus — which is exactly when you need it.
+**2.2 Focus / Do Not Disturb will swallow reminders.** The fix is
+`content.interruptionLevel = .timeSensitive` — but iOS only honours it when the app carries the
+*Time Sensitive Notifications* entitlement, and **that capability is not available to a free
+Personal Team**. The code requests it anyway (it is free to set and starts working the day the
+build is signed by a paid account), and on a free build the equivalent is a one-time allow-list:
+Settings → Focus → your Focus → Apps → add DeskBreak. See `docs/INSTALL.md`.
 
 **2.3 Notification sound plays once, for a few seconds.** No repeating/escalating alarm without
 either (a) Critical Alerts, which require a special Apple entitlement request that personal apps
@@ -109,19 +112,26 @@ DeskBreak/
 ├── DeskBreakApp.swift              // @main, notification delegate wiring
 ├── Models/
 │   ├── ReminderKind.swift          // .water / .stand — titles, bodies, category IDs
-│   ├── ReminderSettings.swift      // Codable settings, @AppStorage-backed
-│   └── SessionState.swift          // startedAt, isPaused, pausedAt, counters
+│   ├── ReminderSettings.swift      // Codable settings, UserDefaults-backed
+│   ├── Session.swift               // startedAt / endsAt / pausedAt + fire-date arithmetic
+│   └── DailyCounts.swift           // per-day tallies, written from the notification delegate
 ├── Services/
 │   ├── NotificationScheduler.swift // permission, build & schedule batch, cancel, top-up
 │   ├── NotificationDelegate.swift  // foreground presentation + Done/Snooze actions
+│   ├── SessionController.swift     // the ObservableObject the views bind to
 │   └── SoundCatalog.swift          // bundled sound list + AVAudioPlayer preview
 ├── Views/
 │   ├── HomeView.swift              // Start/Pause/Stop, dual countdown rings
 │   ├── SettingsView.swift          // intervals, sounds, session length
 │   └── SoundPickerView.swift       // per-kind picker with preview
-├── Resources/Sounds/*.caf          // 6–8 bundled alert tones
-└── Info.plist
+├── Resources/Sounds/*.wav          // 6 synthesised alert tones
+└── Assets.xcassets                 // generated app icon + accent colour
 ```
+
+No `Info.plist`: the target uses `GENERATE_INFOPLIST_FILE` with `INFOPLIST_KEY_*` build settings,
+which removes a file and a class of merge conflicts. The `.xcodeproj`, the tones and the icon are
+all produced by scripts in `scripts/` so the repo carries no hand-maintained binary or generated
+file — see `docs/INSTALL.md`.
 
 ### Core of the scheduler
 ```swift
@@ -167,6 +177,8 @@ using the stored offset. Stop = remove all + reset counters.
 
 ## 5. Installing on your iPhone without the App Store
 
+> Step-by-step instructions live in **`docs/INSTALL.md`**. This section is the reasoning behind them.
+
 **Prerequisite for every path below: a Mac running Xcode.** There is no supported way to build
 and sign an iOS app without macOS. If you don't have one, see Path C.
 
@@ -175,16 +187,18 @@ and sign an iOS app without macOS. If you don't have one, see Path C.
 2. Xcode → Settings → Accounts → add your normal Apple ID (no paid enrolment).
 3. Open the project → target → Signing & Capabilities → *Automatically manage signing* → pick
    your Personal Team → set a unique Bundle Identifier, e.g. `com.aadim.deskbreak`.
-4. Add capability: **Time Sensitive Notifications**.
-5. Plug the iPhone in via USB, trust the Mac, select it as the run destination, press **⌘R**.
-6. On the iPhone: Settings → General → VPN & Device Management → trust your developer certificate.
+4. Plug the iPhone in via USB, trust the Mac, select it as the run destination, press **⌘R**.
+5. On the iPhone: Settings → General → VPN & Device Management → trust your developer certificate.
+6. Allow DeskBreak in each Focus mode you use at your desk — the free-account substitute for the
+   Time Sensitive capability (§2.2).
 
 Limits: certificate expires in **7 days** — reconnect to the Mac and press ⌘R again to refresh
 (settings and data are preserved). Max 3 sideloaded apps at a time, 10 device registrations per week.
 
 ### Path B — Paid Apple Developer Program ($99/yr)
 Identical steps, but the provisioning profile lasts **1 year**, so no weekly re-signing. Also
-unlocks TestFlight (install over the air, 90-day builds, no cable). If this app becomes part of
+unlocks TestFlight (install over the air, 90-day builds, no cable) and the *Time Sensitive
+Notifications* capability, which removes the per-Focus allow-list chore. If this app becomes part of
 your daily routine, this is the option that removes the friction. Given you're running several
 businesses, $99/yr to stop babysitting a certificate is probably the right trade.
 
@@ -216,14 +230,16 @@ they'd be handling your Apple ID.
 
 ---
 
-## 7. Build order
+## 7. Status
 
-1. Xcode project skeleton, bundle ID, signing, deploy an empty app to the phone — **prove the
-   install path works before writing features.**
-2. Notification permission flow + one hardcoded 60-second reminder.
-3. `NotificationScheduler` with the batch algorithm; verify pending count.
-4. HomeView with Start/Pause/Stop and dual countdowns.
-5. SettingsView with intervals persisted via `@AppStorage`.
-6. Bundle the `.caf` sounds; SoundPickerView with preview.
-7. Notification actions (Done / Snooze) + daily counters.
-8. Run the six manual tests in §4. Ship to yourself.
+v1 is written. Everything in §3 under "v1" is implemented, including the notification actions and
+the daily counters. What is left is the part that can only happen on your Mac:
+
+1. Open the project, set Team and Bundle Identifier, run it on the phone (`docs/INSTALL.md` §1).
+2. Work through the seven verification steps in `docs/INSTALL.md` — particularly the Focus one,
+   which is the most likely thing to silently not work on a free signing certificate.
+3. Live with it for a week at 45/50 min before changing anything. The intervals are the setting
+   most worth tuning from real use rather than guessing.
+
+Then decide on v2 (§3) — the Live Activity is the highest-value addition, because a Lock Screen
+countdown is what stops you checking the app.
